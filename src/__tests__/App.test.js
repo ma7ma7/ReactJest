@@ -10,6 +10,10 @@ beforeEach(() => {
   wrapped = shallow(<App />);
 });
 
+afterEach(() => {
+  wrapped.unmount();
+});
+
 it('Is App Render CommentBox', () => {
   expect(wrapped.find(CommentBox).length).toEqual(1);
 });
